@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="index.html">홈으로</a></h1>
+    <div class="tab_content">
+    
+        <!-- 버튼요소 -->
+        <input type="radio" name="tabmenu" id="tab01" checked>
+        <label for="tab01">인적사항</label>
+        <input type="radio" name="tabmenu" id="tab02">
+        <label for="tab02">취미</label>
+        <input type="radio" name="tabmenu" id="tab03">
+        <label for="tab03"></label>
+    
+        <!-- 컨텐츠 요소 -->
+        <div class="conbox con1">
+            <br>
+         
+                <p>이름</p>
+                <img src="name.png" alt="">
+               
+                
+                   <p> 사는곳</p>
+                 <img src="오산.png" alt="" >
+                 <p>생년월일:19960408</p>
+                <img src="mouse.png" alt="">
+         
+           
+        </div>
+        <div class="conbox con2">
+           <p> 배드민턴</p>
+            <img src="bad.jpg" alt="">
+            <p>게임</p>
+            <img src="game.jpg" alt="">
+            <p>탁구</p>
+            <img src="table.jpg" alt="">
+        </div>
+
+        <div class="conbox con3">컨텐츠탭 내용03</div>
+    
+    </div>
+    <style>
+    * {margin:0;padding:0;border:0;}
+    .conbox p{
+        display: inline-block;
+        margin: 50px;
+        font-size: 20px;
+    }
+    .conbox img{
+        margin: 20px;
+        width: 300px;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .tab_content {
+        text-align:center;
+        font-size:0;
+        }
+    input[type="radio"] {display:none;} 
+    input[type="radio"] + label {display:inline-block;padding:20px;background:#f5f5f5;color:#999;font-size:14px;cursor:pointer;} /* 버튼 공통 속성 */
+    input[type="radio"]:checked + label {background:#999;color:#000;} /* 선택된 버튼속성 */
+    
+    .conbox {height:600px;
+    background:#999;margin:0 20px;
+    display:none;text-align:left;
+    font-size:12px;padding:20px;
+    box-sizing:border-box;} 
+    input[id="tab01"]:checked ~ .con1 {display:block;} 
+    input[id="tab02"]:checked ~ .con2 {display:block;}
+    input[id="tab03"]:checked ~ .con3 {display:block;}
+    /* #tab01 :checked ~ .con1{      
+            display: block;
+        }
+    #tab02 :checked ~ .con2{      
+            display: block;
+        }
+    #tab03 :checked ~ .con3{      
+            display: block;
+        } */
+    
+    
+    </style>
+</body>
+</html>
+    
+    
